@@ -1,31 +1,19 @@
-﻿class Commando
+﻿namespace Commando;
+
+
+static class Program
 {
-    private string Name;
-    private int Code;
-    private string[] Tools;
-    private string status;
+    static void Main(string[] args)
+    {
+        Commando commando = new Commando("benny","benn11");
+        commando.Walk();
+        commando.Hide();
+        commando.Attack();
 
-    public Commando(string name, int code)
-    {
-        this.Name = name;
-        this.Code = code;
-        this.Tools = new []{"Hammer", "chisel", "rope", "bag", "canteen"};
+        Weapon weapon = new Weapon("calach12", "h.h.b", 3);
+        weapon.Shoot();
+        weapon.Shoot();
+        weapon.Shoot();
+        weapon.Shoot();
     }
-
-    public void Walk()
-    {
-        this.status = "walking";
-        Console.WriteLine("the soldier walking");
-    }
-    public void Hide()
-    {
-        this.status = "hiding";
-        Console.WriteLine("the soldier hiding");
-    } 
-    public void Attack()
-    {
-        this.status = "attacking";
-        Console.WriteLine($"the soldier {this.Code} walking");
-    }
-    
 }
