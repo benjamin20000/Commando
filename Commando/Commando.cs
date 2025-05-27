@@ -3,14 +3,14 @@ namespace Commando;
 class Commando
 {
     private string Name;
-    private string Code;
+    public string CodeName { set; get; }
     private string[] Tools;
     private string status;
 
     public Commando(string name, string code)
     {
         this.Name = name;
-        this.Code = code;
+        this.CodeName = code;
         this.Tools = new []{"Hammer", "chisel", "rope", "bag", "canteen"};
     }
 
@@ -27,7 +27,14 @@ class Commando
     public void Attack()
     {
         this.status = "attacking";
-        Console.WriteLine($"the soldier {this.Code} attacking");
+        Console.WriteLine($"the soldier {this.CodeName} attacking");
+    }
+
+    public void SayName(string commanderRank)
+    {
+        if (commanderRank == "GENERAL") {Console.WriteLine($"the soldier name is {this.Name}");}
+        else if(commanderRank == "COLONEL") {Console.WriteLine($"the soldier code name is {this.CodeName}");}
+        else{ Console.WriteLine($"you dont have the permission to know something like this");}
     }
     
 }
