@@ -24,7 +24,7 @@ public class Commando
         this.status = "hiding";
         Console.WriteLine("the soldier hiding");
     } 
-    public void Attack()
+    public virtual void  Attack()
     {
         this.status = "attacking";
         Console.WriteLine($"the soldier {this.CodeName} attacking");

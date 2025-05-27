@@ -8,5 +8,10 @@ public class SeaCommando : Commando
     {
         Console.WriteLine("the soldier is winning");
     }
+
+    public override void Attack()
+    {
+        Console.WriteLine("the SeaCommando is atacking from the see....");
+    }
     
 }
