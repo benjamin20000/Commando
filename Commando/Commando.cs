@@ -1,6 +1,6 @@
 namespace Commando;
 
-class Commando
+public class Commando
 {
     private string Name;
     public string CodeName { set; get; }
